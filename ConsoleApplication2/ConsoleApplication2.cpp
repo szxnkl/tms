@@ -32,8 +32,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	vector<int> in = { 1, 2, 3 };
 	vector<int> out = { 1, 2, 3 };
 	string name = "aaa";
-	State s = State(SL, name, 0, vector<int>{1, 2, 3}, out, true);
-	v_s.push_back(s);
+	v_s.push_back(State(NOGOOD, "tragedy", 0, vector<int>{}, vector<int>{}, false));
+	v_s.push_back(State(SL, "loves_0000", 1, vector<int>{}, vector<int>{}, true));
+	v_s.push_back(State(SL, "loves_0001", 2, vector<int>{}, vector<int>{}, true));
+	v_s.push_back(State(SL, "assume_0000", 3, vector<int>{}, vector<int>{}, true));
+	v_s.push_back(State(SL, "not_0000", 4, vector<int>{}, vector<int>{5}, false));
+	v_s.push_back(State(SL, "loves_0002", 5, vector<int>{3}, vector<int>{4}, true));
+	v_s.push_back(State(SL, "assume_0001", 6, vector<int>{}, vector<int>{}, true));
+	v_s.push_back(State(SL, "not_0001", 7, vector<int>{}, vector<int>{8}, false));
+	v_s.push_back(State(SL, "loves_0003", 8, vector<int>{6}, vector<int>{7}, true));
+	v_s.push_back(State(SL, "jealous_0000", 9, vector<int>{}, vector<int>{}, true));
+
+
+	cout << (v_s[0].name) << endl;
 	return 0;
 }
 
